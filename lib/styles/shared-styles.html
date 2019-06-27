@@ -1,0 +1,262 @@
+<dom-module id="shared-styles">
+  <template>
+    <style>
+      paper-material {
+        background: white;
+        display: block;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      .header {
+        background: rgb(77,182,172);
+        background: linear-gradient(90deg, rgba(77,182,172,1) 0%, rgba(0,134,125,0.7973564425770308) 65%, rgba(34,134,195,1) 100%);
+      }
+
+      input, select, button, textarea {
+        font-size        : var(--font-size);
+        font-weight      : var(--font-weight);
+        color            : var(--text-primary-color);
+        box-sizing       : border-box;
+      }
+
+      input, textarea, select {
+        border-radius: 4px;
+        background-color: white;
+        border: 1px solid var(--dark-background-color);
+        padding: 9px;
+        margin: 3px 1px;
+      }
+
+      input:focus {
+        border: 1px solid var(--default-primary-color);
+        outline: none;
+      }
+
+      input[disabled] {
+        background-color: var(--default-background-color);
+        color: var(--secondary-text-color);
+        cursor: not-allowed;
+      }
+
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+
+      select::after {
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 7px solid #666;
+        margin-top: -3px;
+      }
+
+      .help {
+        color: var(--secondary-text-color);
+        font-size: 14px;
+      }
+
+      .narrow-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .narrow-container > * {
+        max-width: var(--max-text-width);
+        width: 100%;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container > * {
+        max-width: var(--max-width);
+        width: 100%;
+      }
+
+      .main-panel {
+        background-color: white;
+        padding: 40px;
+        margin: 10px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+      }
+
+      a, a:visited {
+        color: var(--default-text-color);
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      a[highlight], a[highlight]:visited {
+        text-decoration: none;
+        color: var(--default-primary-color);
+      }
+
+      a:hover {
+        color: var(--default-primary-color);
+      }
+
+      a[inverse], a[inverse]:visited {
+        color: var(--inverse-text-color);
+      }
+
+      h1, h2, h3, h4 {
+        font-weight: 400;
+      }
+
+      h2.uheader {
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        margin: 0 0 10px 0;
+        padding-bottom: 5px;
+      }
+
+      h2.uheader.blue, h2.uheader[color="blue"] {
+        border-bottom-color: var(--default-secondary-color);
+      }
+      h2.uheader.green, h2.uheader[color="green"] {
+        border-bottom-color: var(--default-primary-color);
+      }
+      h2.uheader.lightgreen, h2.uheader[color="lightgreen"] {
+        border-bottom-color: var(--light-primary-color);
+      }
+      h2.uheader.lightblue, h2.uheader[color="lightblue"] {
+        border-bottom-color: var(--light-secondary-color);
+      }
+      h2.uheader.dark, h2.uheader[color="dark"] {
+        border-bottom-color: var(--text-primary-color);
+      }
+
+      .indent-panel {
+        margin-left: 45px;
+      }
+
+      @media(max-width: 750px) {
+        .main-panel {
+          padding: 25px;
+        }
+        .indent-panel {
+          margin-left: 10px;
+        }
+      }
+
+      @media(max-width: 600px) {
+        .main-panel {
+          padding: 15px;
+        }
+        .indent-panel {
+          margin-left: 5px;
+        }
+      }
+
+      .row {
+        display: flex;
+        margin-bottom: 35px;
+      }
+
+      .row > * {
+        flex : 1;
+        padding: 10px;
+      }
+
+      @media(max-width: 600px) {
+        .row {
+          display: block;
+        }
+        .row > * {
+          padding: 5px;
+        }
+      }
+
+      /* HEADER */
+      .header {
+        display: flex;
+        align-items: center;
+        background: var(--default-primary-color);
+        padding: 10px;
+      }
+
+      .header[sandbox] {
+        background: var(--default-secondary-color);
+      }
+      
+      .header [main-title] {
+        flex: 1;
+        font-size: 22px;
+      }
+
+      .header [main-title] small {
+        font-size: 14px;
+      }
+
+      [icon="menu"], [main-title] {
+        color: var(--inverse-text-color);
+      }
+
+      paper-icon-button {
+        color: var(--inverse-text-color);
+      }
+
+      @keyframes show {
+        0%   { opacity: .5; transform: scale(.9) }
+        100% { opacity: 1; transform: scale(1) }
+      }
+
+      #menu {
+        position: absolute;
+        top: 50px;
+        right : 0;
+        background: var(--light-primary-color);
+        color: var(--default-background-color);
+        white-space: nowrap;
+        animation: show 250ms ease-out;
+        z-index: 1000;
+        border-radius: 0 0 6px 6px;
+        min-width: 150px;
+      }
+
+      #menu a {
+        color: var(--default-background-color);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--default-background-color);
+        padding: 15px;
+        cursor: pointer;
+      }
+
+      #menu a:hover {
+        color: white;
+        /* background-color: var(--default-primary-color); */
+      }
+
+      #menu a:hover iron-icon {
+        transform: scale(1.5);
+      }
+
+      #menu a iron-icon {
+        transform: scale(1);
+        transition: transform 200ms ease-out;
+        margin-right: 15px;
+      }
+
+      @media(max-width: 768px) {
+        [main-title] small {
+          display: none;
+        }
+      }
+    </style>
+  </template>
+</dom-module>

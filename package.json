@@ -1,0 +1,16 @@
+{
+  "name": "ecosis-client-commons",
+  "version": "0.0.1",
+  "description": "Base styles for EcoSIS and EcoSML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jrmerz@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@polymer/paper-styles": "^3.0.1",
+    "@polymer/polymer": "^3.2.0",
+    "lit-element": "^2.2.0"
+  }
+}
