@@ -5,6 +5,7 @@ import "./lib/styles/style-properties.js"
 import sharedStylesHtml from "./lib/styles/shared-styles.html"
 import stylePropertiesHtml from "./lib/styles/style-properties.html"
 import './lib/elements/search-header/app-search-header'
+import './lib/elements/search-pagination/app-search-pagination'
 
 export {
   litCss, sharedStylesHtml, stylePropertiesHtml
