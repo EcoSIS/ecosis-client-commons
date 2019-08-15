@@ -189,9 +189,20 @@
         margin-bottom: 35px;
       }
 
+      .row:last-child {
+        margin-bottom: 0;
+      }
+
       .row > * {
         flex : 1;
-        padding: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+      .row > *:first-child {
+        padding-left: 0;
+      }
+      .row > *:last-child {
+        padding-right: 0;
       }
 
       @media(max-width: 600px) {
@@ -199,7 +210,7 @@
           display: block;
         }
         .row > * {
-          padding: 5px;
+          padding: 0px;
         }
       }
 
