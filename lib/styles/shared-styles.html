@@ -222,9 +222,9 @@
         padding: 10px;
       }
 
-      .header[sandbox] {
+      /* .header[sandbox] {
         background: var(--default-secondary-color);
-      }
+      } */
       
       .header [main-title] {
         flex: 1;
@@ -241,49 +241,6 @@
 
       paper-icon-button {
         color: var(--inverse-text-color);
-      }
-
-      @keyframes show {
-        0%   { opacity: .5; transform: scale(.9) }
-        100% { opacity: 1; transform: scale(1) }
-      }
-
-      #menu {
-        position: absolute;
-        top: 50px;
-        right : 0;
-        background: var(--light-primary-color);
-        color: var(--default-background-color);
-        white-space: nowrap;
-        animation: show 250ms ease-out;
-        z-index: 1000;
-        border-radius: 0 0 6px 6px;
-        min-width: 150px;
-      }
-
-      #menu a {
-        color: var(--default-background-color);
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid var(--default-background-color);
-        padding: 15px;
-        cursor: pointer;
-      }
-
-      #menu a:hover {
-        color: white;
-        /* background-color: var(--default-primary-color); */
-      }
-
-      #menu a:hover iron-icon {
-        transform: scale(1.5);
-      }
-
-      #menu a iron-icon {
-        transform: scale(1);
-        transition: transform 200ms ease-out;
-        margin-right: 15px;
       }
 
       @media(max-width: 768px) {
