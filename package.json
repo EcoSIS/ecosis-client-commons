@@ -1,6 +1,6 @@
 {
   "name": "ecosis-client-commons",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Base styles for EcoSIS and EcoSML",
   "main": "index.js",
   "scripts": {
